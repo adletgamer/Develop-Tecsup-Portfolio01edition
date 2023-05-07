@@ -138,8 +138,8 @@ model-viewer{
     position: relative;
     display: grid;
     place-items: center;
-    width: 10vh;
-    height: 25vw;
+    width: 10vw;
+    height: 25vh;
     margin: 2vw;
     overflow: hidden;
     border-radius: 20px;
@@ -150,7 +150,7 @@ model-viewer{
     z-index: 1;
 }
 .r3f,
-.threeImg,
+.threeJsImg,
 .htmlImg{
     width: 150%;
     z-index: 1;
@@ -158,10 +158,97 @@ model-viewer{
 }
 .js{
     width: 60%;
+    z-index: 1;
+}
+.title{
+    color: #fff;
+    width: 60%;
     position: relative;
     font-size: 1.6vw;
     text-align: center;
     z-index: 10;
-    font-family: "EB Garamend";
+    font-family: "EB Garamond";
     font-weight: 400;
+}
+.card::before{
+    content: "";
+    position: absolute;
+    width: 20vw;
+    height: 25vh;
+    background: linear-gradient(#00ccff, #d400d4);
+    animation: rotation 5s linear infinite;
+}
+.card::after{
+    content: "";
+    position: absolute;
+    inset: 0.15vw;
+    background-color: #16063a;
+    border-radius: 15px;
+}
+@keyframes rotation{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/*Time Line*/
+.time-line-section{
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: auto;
+    background-color: #010115;
+    background-size: 100vw;
+    padding: 0 10vw;
+}
+.time-line-content{
+    display: grid;
+    place-items: center;
+    width: 100vh;
+    padding-bottom: 25vh;
+}
+.heading-description{
+    display: grid;
+    place-items: center;
+    margin-bottom: 10vh;
+    margin-left: -50vw;
+}
+.time-line-title{
+    color: #ffffff5a;
+    font-size: 1vw;
+    padding-bottom: 2vh;
+}
+.time-line-subheading{
+    color: #fff;
+    font-size: 3.5vw;
+    font-family: "Dancing Script";
+    margin-left: 50vw;
+}
+.timeline{
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+.line{
+    position: absolute;
+    z-index: 2;
+    width: 0.25vw;
+    top: -7vh;
+    background-color: #fff;
+    box-shadow: 0 0 30px #fff;
+}
+.line::before,
+.line::after{
+    position: absolute;
+    display: block;
+    content: "";
+    width: 1.2vw;
+    height: 2.3vh;
+    border-radius: 50%;
+    background-color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
 }
